@@ -1,0 +1,11 @@
+CREATE TABLE `book` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `img_url` VARCHAR(500) NULL,
+  PRIMARY KEY (`id`));
+
+ALTER TABLE `book` 
+ADD COLUMN `date` VARCHAR(45) NULL AFTER `img_url`;
+
+ALTER TABLE `book` 
+ADD COLUMN `description` VARCHAR(1000) NULL AFTER `date`;
